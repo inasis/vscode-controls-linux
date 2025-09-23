@@ -1,7 +1,5 @@
 ### Vscode left gnome controls (less than vscode version 1.98)
 
-/!\ this script not working on vscode >= 1.98, see [issue1](https://github.com/remigermain/vscode-controls-linux/issues/1)
-
 ![preview](./preview.png)
 > this script move window controls to left in linux with gnome style
 
@@ -18,9 +16,13 @@ in your vscode settings:
     // needed to change to custom style
     "window.titleBarStyle": "custom",
 
-    // important to disable native controls 
-    "window.experimentalControlOverlay": false
+    // for vscode < 1.98
+    "window.experimentalControlOverlay": false,
+    // for vscode >= 1.104
+    "window.controlsStyle": "custom",
 }
+
+
 ```
 
 next restart your vscode in sudo mode or follow the [extentions](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) instructions.

@@ -4,15 +4,16 @@
   const style = Object.freeze({
     // button background color
     backgroundColor: "#33373e",
+    backgroundColorHover: "#23252A",
     // button text color
     color: "#c0c0c0",
     // button size
-    size: "32px",
+    size: "20px",
     // border radius
     radius: "999px",
-    fontSize: 10,
+    fontSize: 8,
     fontWeight: "700",
-    gap: "6px"
+    gap: "8px"
   });
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -34,14 +35,15 @@
       controls.style.gap = controls.style.marginLeft = style.gap
       controls.childNodes.forEach((child) => {
         child.style.borderRadius = style.radius
+        child.style.backgroundColor = child.style.backgroundColor = style.backgroundColor
         child.style.width = child.style.height = style.size
         child.style.color = style.color
         child.style.margin = "auto"
         child.style.cursor = "pointer"
         child.style.fontWeight = style.fontWeight
         child.style.fontSize = `${style.fontSize}px`
-        child.addEventListener("mouseleave", () => child.style.backgroundColor = "")
-        child.addEventListener("mouseenter", () => child.style.backgroundColor = style.backgroundColor)
+        child.addEventListener("mouseleave", () => child.style.backgroundColor = style.backgroundColor)
+        child.addEventListener("mouseenter", () => child.style.backgroundColor = style.backgroundColorHover)
       })
       leftTitlebar.appendChild(controls)
       clearInterval(timer)
