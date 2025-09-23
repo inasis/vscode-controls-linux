@@ -1,4 +1,4 @@
-### Vscode left gnome controls (less than vscode version 1.98)
+### Vscode left gnome controls
 
 ![preview](./preview.png)
 > this script move window controls to left in linux with gnome style
