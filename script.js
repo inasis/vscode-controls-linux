@@ -3,7 +3,7 @@
   const colors = ["#F06560", "#FBC636", "#45B84C"];
 
   const style = Object.freeze({
-    size: "14px",
+    size: "13px",
     radius: "999px",
     fontSize: 8,
     fontWeight: "900",
