@@ -1,6 +1,6 @@
 ## Move the window controls in VSCode on Linux to the left
 
-![preview](./preview.png)
+![preview](./preview_new.png)
 This script moves the window controls (close, minimize, and maximize buttons) to the left. 
 
 * **Shape was created in a similar form to the Whitesur theme.**  
@@ -46,7 +46,7 @@ sudo chown -R $(whoami) /usr/share/$(which codium &>/dev/null && echo "codium" |
 Launch VSCode and Open the Command Palette (Ctrl+Shift+P).  
 Search for and run "Reload Custom CSS and JS."  
 
-![preview](./reload_css.png)  
+![reload_css](./reload_css.png)  
 <br />   
 
 After restarting VSCode, the window controls will move to the left.
