@@ -3,11 +3,10 @@
   const colors = ["#F06560", "#FBC636", "#45B84C"];
 
   const style = Object.freeze({
-    color: "#ffffff",
-    size: "20px",
+    size: "12px",
     radius: "999px",
-    fontSize: 9,
-    fontWeight: "400",
+    fontSize: 8,
+    fontWeight: "700",
     gap: "8px"
   });
 
@@ -32,8 +31,8 @@
         
         child.style.borderRadius = style.radius;
         child.style.backgroundColor = btnColor;
+        child.style.color = btnColor;
         child.style.width = child.style.height = style.size;
-        child.style.color = style.color;
         child.style.margin = "auto";
         child.style.cursor = "pointer";
         child.style.fontWeight = style.fontWeight;
@@ -41,10 +40,15 @@
         child.style.display = "flex";
         child.style.alignItems = "center";
         child.style.justifyContent = "center";
-        child.style.transition = "filter 0.2s";
+        child.style.transition = "filter 0.2s, color 0.2s";
 
-        child.onmouseenter = () => child.style.filter = "brightness(0.8)";
-        child.onmouseleave = () => child.style.filter = "brightness(1)";
+        child.onmouseenter = () => {
+          child.style.color = "rgba(0, 0, 0, 0.6)";
+        };
+        child.onmouseleave = () => {
+          child.style.filter = "brightness(1)";
+          child.style.color = btnColor;
+        };
       });
 
       leftTitlebar.appendChild(controls);
