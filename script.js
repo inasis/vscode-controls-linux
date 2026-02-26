@@ -3,11 +3,12 @@
   const colors = ["#F06560", "#FBC636", "#45B84C"];
 
   const style = Object.freeze({
-    size: "12px",
+    size: "14px",
     radius: "999px",
     fontSize: 8,
-    fontWeight: "700",
-    gap: "8px"
+    fontWeight: "900",
+    gap: "10px",
+    marginX: "17px"
   });
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -24,8 +25,9 @@
       controls.style.width = "auto";
       controls.style.display = "flex";
       controls.style.gap = style.gap;
-      controls.style.marginLeft = style.gap;
-
+      controls.style.marginLeft = style.marginX;
+      controls.style.marginRight = style.marginX;
+      
       controls.childNodes.forEach((child, i) => {
         const btnColor = colors[i] || "#33373e"; 
         
@@ -43,7 +45,7 @@
         child.style.transition = "filter 0.2s, color 0.2s";
 
         child.onmouseenter = () => {
-          child.style.color = "rgba(0, 0, 0, 0.6)";
+          child.style.color = "rgba(0, 0, 0, 0.8)";
         };
         child.onmouseleave = () => {
           child.style.filter = "brightness(1)";
