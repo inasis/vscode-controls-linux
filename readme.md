@@ -3,9 +3,16 @@
 ![preview](./preview.png)
 This script moves the window controls (close, minimize, and maximize buttons) to the left. 
 
+* **Shape was created in a similar form to the Whitesur theme.**  
+* The above preview additionally uses the [hide-vscode-icon](https://marketplace.visualstudio.com/items?itemName=BuldiDev.hide-vscode-icon) extension.
+
+<br />   
+   
 > [!CAUTION]
 > This script method only works on VSCode versions 1.97.2 and earlier, so you should intentionally use an older version.
 
+<br />   
+  
 ### Installation
 First, you need to install the [vscode-custom-css](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) extension from the VSCode Extension Marketplace.
 
@@ -24,6 +31,7 @@ Open the ~/.config/Code/User/settings.json file in VSCode and add the following 
     "window.controlsStyle": "custom",
 }
 ```
+<br />   
 
 ### Set and apply permissions
 Grant the extension permission to modify system files by running the command below in Terminal:
@@ -32,7 +40,13 @@ Grant the extension permission to modify system files by running the command bel
 sudo chown -R $(whoami) "$(which codium 2>/dev/null || which code)"
 sudo chown -R $(whoami) /usr/share/$(which codium &>/dev/null && echo "codium" || echo "code")
 ```
+<br />   
+
+### Final process
 Launch VSCode and Open the Command Palette (Ctrl+Shift+P).  
 Search for and run "Reload Custom CSS and JS."  
-  
+
+![preview](./reload_css.png)  
+<br />   
+
 After restarting VSCode, the window controls will move to the left.
