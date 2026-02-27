@@ -9,7 +9,7 @@ This script moves the window controls (close, minimize, and maximize buttons) to
 <br />   
    
 > [!CAUTION]
-> This script method only works on VSCode versions 1.97.2 and earlier, so you should intentionally use an older version.
+> This method only works in [VSCode 1.97.2](https://code.visualstudio.com/updates/v1_97) or older versions.
 
 <br />   
   
